@@ -11,7 +11,7 @@ namespace MauiDictionary
         public ObservableCollection<Word> LearnedWords { get; set; }
         public ObservableCollection<Word> RevisionWords { get; set; }
 
-        // Свойства видимости для каждой категории
+        
         private bool _isLearningVisible = true;
         public bool IsLearningVisible
         {
