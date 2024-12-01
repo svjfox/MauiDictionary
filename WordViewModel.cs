@@ -6,7 +6,7 @@ namespace MauiDictionary
 {
     public class WordViewModel : INotifyPropertyChanged
     {
-        // Коллекции для каждой категории слов
+        // Коллекции для каждой категории сло
         public ObservableCollection<Word> LearningWords { get; set; }
         public ObservableCollection<Word> LearnedWords { get; set; }
         public ObservableCollection<Word> RevisionWords { get; set; }
