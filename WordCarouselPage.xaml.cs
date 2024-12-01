@@ -1,5 +1,3 @@
-using Microsoft.Maui.Controls;
-
 namespace MauiDictionary
 {
     public partial class WordCarouselPage : ContentPage
@@ -13,10 +11,9 @@ namespace MauiDictionary
             BindingContext = viewModel;
         }
 
-
-
         private async void OnAddWordClicked(object sender, EventArgs e)
         {
+            // Переход на страницу добавления/редактирования слова
             await Navigation.PushAsync(new AddEditWordPage(viewModel, null));
         }
 

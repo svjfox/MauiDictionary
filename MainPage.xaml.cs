@@ -2,17 +2,15 @@
 {
     public partial class MainPage : ContentPage
     {
-        int count = 0;
-
         public MainPage()
         {
             InitializeComponent();
         }
 
-        private async void OnCounterClicked(object sender, EventArgs e)
+        private async void OnStartButtonClicked(object sender, EventArgs e)
         {
+            // Переход к странице изучения слов
             await Navigation.PushAsync(new WordCarouselPage());
         }
     }
-
 }

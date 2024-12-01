@@ -4,9 +4,7 @@
              x:Class="MauiDictionary.MainPage">
 
     <ScrollView>
-        <VerticalStackLayout
-            Padding="30,0"
-            Spacing="25">
+        <VerticalStackLayout Padding="30,0" Spacing="25">
             <Image
                 Source="wing.png"
                 HeightRequest="400"
@@ -22,13 +20,13 @@
                 Text="Нажми для начала изучения"
                 Style="{StaticResource SubHeadline}"
                 SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I" />
+                SemanticProperties.Description="Welcome to dot net Multi platform App UI" />
 
             <Button
                 x:Name="CounterBtn"
-                Text="Начнем!" 
+                Text="Начнем!"
                 SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
+                Clicked="OnStartButtonClicked"
                 HorizontalOptions="Fill" />
         </VerticalStackLayout>
     </ScrollView>
