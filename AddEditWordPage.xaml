@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiDictionary.AddEditWordPage"
+             Title="Добавить/Изменить слово">
+    <StackLayout Padding="10">
+        <Entry x:Name="WordEntry" Placeholder="Слово" />
+        <Entry x:Name="TranslationEntry" Placeholder="Перевод" />
+        <Entry x:Name="ExplanationEntry" Placeholder="Объяснение" />
+
+        <Picker x:Name="CategoryPicker" Title="Выберите категорию">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Обучение</x:String>
+                    <x:String>Выучено</x:String>
+                    <x:String>Повторение</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+        <Button Text="Сохранить" Clicked="OnSaveClicked" />
+    </StackLayout>
+</ContentPage>
