@@ -8,7 +8,7 @@
 
             <Button Text="Добавить слово" Clicked="OnAddWordClicked" />
 
-            <!-- Секция для категории "Обучение" с переключателем и точками прогресса -->
+            
             <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand" Padding="0,10,0,0">
                 <Label Text="Обучение" FontSize="24" FontAttributes="Bold" VerticalOptions="Center" />
                 <Switch IsToggled="{Binding IsLearningVisible}" HorizontalOptions="EndAndExpand" />
@@ -23,12 +23,12 @@
                     <DataTemplate>
                         <Frame Padding="10" Margin="10" BorderColor="Gray" CornerRadius="10">
                             <StackLayout>
-                                <Label Text="{Binding WordText}" FontSize="38" FontAttributes="Bold" />
-                                <Label Text="{Binding Translation}" FontSize="28" />
-                                <Label Text="{Binding Explanation}" FontSize="24" />
+                                <Label Text="{Binding WordText}" FontSize="38" FontAttributes="Bold" MaxLines="1"/>
+                                <Label Text="{Binding Translation}" FontSize="28" MaxLines="1"/>
+                                <Label Text="{Binding Explanation}" FontSize="14" FontAttributes="Italic" MaxLines="1"/>
                                 <Label Text="{Binding Category}" FontSize="24" />
 
-                                <!-- Контейнер для кнопок внизу слайда -->
+                                
                                 <HorizontalStackLayout VerticalOptions="EndAndExpand" HorizontalOptions="Center" Spacing="20" Margin="0,10,0,0">
                                     <Button Text="Редактировать" Clicked="OnEditWordClicked" CommandParameter="{Binding .}" />
                                     <Button Text="Удалить" Clicked="OnRemoveWordClicked" CommandParameter="{Binding .}" />
@@ -41,7 +41,7 @@
             </CarouselView>
             <IndicatorView x:Name="LearningIndicator" IndicatorColor="Gray" SelectedIndicatorColor="Blue" HorizontalOptions="Center" />
 
-            <!-- Секция для категории "Выучено" с переключателем и точками прогресса -->
+            
             <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand" Padding="0,10,0,0">
                 <Label Text="Выучено" FontSize="24" FontAttributes="Bold" VerticalOptions="Center" />
                 <Switch IsToggled="{Binding IsLearnedVisible}" HorizontalOptions="EndAndExpand"/>
@@ -56,12 +56,12 @@
                     <DataTemplate>
                         <Frame Padding="10" Margin="10" BorderColor="Gray" CornerRadius="10">
                             <StackLayout>
-                                <Label Text="{Binding WordText}" FontSize="38" FontAttributes="Bold" />
-                                <Label Text="{Binding Translation}" FontSize="28" />
-                                <Label Text="{Binding Explanation}" FontSize="24" />
+                                <Label Text="{Binding WordText}" FontSize="38" FontAttributes="Bold" MaxLines="1"/>
+                                <Label Text="{Binding Translation}" FontSize="28" MaxLines="1"/>
+                                <Label Text="{Binding Explanation}" FontSize="14" FontAttributes="Italic" MaxLines="1"/>
                                 <Label Text="{Binding Category}" FontSize="24" />
 
-                                <!-- Контейнер для кнопок внизу слайда -->
+                                
                                 <HorizontalStackLayout VerticalOptions="EndAndExpand" HorizontalOptions="Center" Spacing="20" Margin="0,10,0,0">
                                     <Button Text="Редактировать" Clicked="OnEditWordClicked" CommandParameter="{Binding .}" />
                                     <Button Text="Удалить" Clicked="OnRemoveWordClicked" CommandParameter="{Binding .}" />
@@ -74,7 +74,7 @@
             </CarouselView>
             <IndicatorView x:Name="LearnedIndicator" IndicatorColor="Gray" SelectedIndicatorColor="Blue" HorizontalOptions="Center" />
 
-            <!-- Секция для категории "Повторение" с переключателем и точками прогресса -->
+            
             <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand" Padding="0,10,0,0">
                 <Label Text="Повторение" FontSize="24" FontAttributes="Bold" VerticalOptions="Center" />
                 <Switch IsToggled="{Binding IsRevisionVisible}" HorizontalOptions="EndAndExpand"/>
@@ -89,12 +89,12 @@
                     <DataTemplate>
                         <Frame Padding="10" Margin="10" BorderColor="Gray" CornerRadius="10">
                             <StackLayout>
-                                <Label Text="{Binding WordText}" FontSize="38" FontAttributes="Bold" />
-                                <Label Text="{Binding Translation}" FontSize="28" />
-                                <Label Text="{Binding Explanation}" FontSize="24" />
+                                <Label Text="{Binding WordText}" FontSize="38" FontAttributes="Bold" MaxLines="1"/>
+                                <Label Text="{Binding Translation}" FontSize="28" MaxLines="1"/>
+                                <Label Text="{Binding Explanation}" FontSize="14" FontAttributes="Italic" MaxLines="1"/>
                                 <Label Text="{Binding Category}" FontSize="24" />
 
-                                <!-- Контейнер для кнопок внизу слайда -->
+                                
                                 <HorizontalStackLayout VerticalOptions="EndAndExpand" HorizontalOptions="Center" Spacing="20" Margin="0,10,0,0">
                                     <Button Text="Редактировать" Clicked="OnEditWordClicked" CommandParameter="{Binding .}" />
                                     <Button Text="Удалить" Clicked="OnRemoveWordClicked" CommandParameter="{Binding .}" />

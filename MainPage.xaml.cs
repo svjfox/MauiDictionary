@@ -9,7 +9,7 @@
 
         private async void OnStartButtonClicked(object sender, EventArgs e)
         {
-            // Переход к странице изучения слов
+            
             await Navigation.PushAsync(new WordCarouselPage());
         }
     }

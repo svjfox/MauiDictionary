@@ -11,5 +11,5 @@
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
 
-    <!-- Другие страницы и маршруты -->
+   
 </Shell>

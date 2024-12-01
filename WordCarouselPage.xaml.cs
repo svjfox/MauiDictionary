@@ -13,7 +13,7 @@ namespace MauiDictionary
 
         private async void OnAddWordClicked(object sender, EventArgs e)
         {
-            // Переход на страницу добавления/редактирования слова
+            
             await Navigation.PushAsync(new AddEditWordPage(viewModel, null));
         }
 
@@ -30,5 +30,7 @@ namespace MauiDictionary
             var word = (Word)button.CommandParameter;
             await Navigation.PushAsync(new AddEditWordPage(viewModel, word));
         }
+
+
     }
 }

@@ -53,15 +53,15 @@ namespace MauiDictionary
             LearningWords = new ObservableCollection<Word>();
             LearnedWords = new ObservableCollection<Word>();
             RevisionWords = new ObservableCollection<Word>();
-            InitializeDatabase(); // Инициализация базы данных
+            InitializeDatabase(); 
         }
 
         private async void InitializeDatabase()
         {
             var dbPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "dictionary.db3");
             _database = new SQLiteAsyncConnection(dbPath);
-            await _database.CreateTableAsync<Word>(); // Создание таблицы, если она не существует
-            await LoadWordsFromDatabase(); // Загрузка данных из базы
+            await _database.CreateTableAsync<Word>(); 
+            await LoadWordsFromDatabase(); 
         }
 
         public async Task LoadWordsFromDatabase()
@@ -69,7 +69,7 @@ namespace MauiDictionary
             var words = await _database.Table<Word>().ToListAsync();
             foreach (var word in words)
             {
-                AddWordToCategory(word); // Добавляем слова в соответствующие категории
+                AddWordToCategory(word);
             }
         }
 
@@ -92,13 +92,13 @@ namespace MauiDictionary
         public async void AddWord(string wordText, string translation, string explanation, string category)
         {
             var word = new Word(wordText, translation, explanation, category);
-            await _database.InsertAsync(word); // Добавление слова в базу данных
-            AddWordToCategory(word); // Добавление в коллекцию для отображения
+            await _database.InsertAsync(word); 
+            AddWordToCategory(word); 
         }
 
         public async void RemoveWord(Word word)
         {
-            await _database.DeleteAsync(word); // Удаление слова из базы данных
+            await _database.DeleteAsync(word); 
             switch (word.Category)
             {
                 case "Обучение":
@@ -120,17 +120,17 @@ namespace MauiDictionary
             word.Explanation = newExplanation;
             word.Category = newCategory;
 
-            await _database.UpdateAsync(word); // Обновление данных в базе
-            ReloadWords(); // Перезагрузка списка
+            await _database.UpdateAsync(word); 
+            ReloadWords();
         }
 
         private async void ReloadWords()
         {
-            // Очистка коллекций
+            
             LearningWords.Clear();
             LearnedWords.Clear();
             RevisionWords.Clear();
-            await LoadWordsFromDatabase(); // Загрузка всех слов из базы
+            await LoadWordsFromDatabase(); 
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
